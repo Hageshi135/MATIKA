@@ -1,0 +1,272 @@
+
+.body-index {
+    background-color: #dde4ff;
+    background-image: url(Gambar/7.png);
+    background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.body-isi {
+    background-color: #dde4ff;
+    background-image: url(Gambar/8.png);
+    background-size: cover;
+}
+
+.body-kontent {
+    background-color: #dde4ff;
+    background-image: url(Gambar/9.png);
+    background-size: cover;
+}
+
+.Navbar {
+
+    width: 90%;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+
+}
+
+.ul-Navbar {
+
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ul-Navbar a {
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+ul.ul-Navbar a:hover {
+    background-color: #dde4ff;
+    border-radius: 6px;
+}
+
+.li-Navbar {
+    background-color: white;
+    height: 30px;
+    list-style-type: none;
+    padding: 10px;
+    color: #4477e1;
+    font-size: 30px;
+    font-family: 'Merriweather', serif;
+    border-radius: 3px;
+
+}
+
+.li-MATIKA {
+    justify-content: left;
+    list-style-type: none;
+    margin-right: 42%;
+    color: #6d66d9;
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
+
+.li-aljabar {
+    justify-content: left;
+    list-style-type: none;
+    margin-right: 30%;
+    color: #6d66d9;
+    font-size: 60px;
+    font-family: sans-serif;
+}
+
+.selamat {
+    justify-content: left;
+    margin-left: 7%;
+    color: #264cc9;
+    font-size: 40px;
+    font-family: sans-serif;
+    padding: 10 px;
+}
+
+.kami {
+    justify-content: left;
+    margin-left: 7%;
+    color: #264cc9;
+    font-size: 15px;
+    font-family: sans-serif;
+    padding: 20 px;
+
+}
+
+.logo {
+    z-index: 2;
+    position: relative;
+    height: 300px;
+    width: auto;
+    left: 1100px;
+    top: -175px;
+}
+
+
+.content-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 30px;
+    overflow-x: auto;
+    margin-top: -180px;
+    margin-left: 60px;
+    white-space: nowrap
+    
+}
+.content-container-isi {
+    display: flex;               
+    flex-wrap: wrap;               
+    gap: 50px;                     
+    overflow-x: auto;             
+    padding: 10px 0;              
+    margin-bottom: 20px; 
+    margin-top: 100px;
+    margin-left: 75px;
+    
+}
+
+.content-box {
+    background-color: #dde4ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    flex: 0 0 auto;
+    max-height:300px ;
+    margin-right: 20px;
+    transition: transform 0.3s; 
+}
+.content-box:hover {
+    transform: scale(1.1);
+}
+
+.content-box-tips {
+    background-color: #dde4ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    max-height: 500px;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    position: fixed;
+    top: 20%;
+
+}
+
+.content-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content-box h3 {
+    margin: 15px 0;
+    font-size: 1.2em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.content-box p {
+    font-size: 0.9em;
+    color: #555;
+
+}
+
+.content-box a {
+    text-decoration: none;
+}
+
+
+
+.content-container-AL {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 10px;
+    overflow-x: auto;
+    margin-top: 200px;
+    margin-left: 15%;
+    
+}
+
+
+.content-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content-box h3 {
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+.content-box p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.content-container-aljabar-2 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 10px;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+
+.tips-box {
+    position: fixed;
+    top: 20%;
+    right: 150px;
+    width: 700px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.tips-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.tips-box p {
+    font-size: 1em;
+    color: #555;
+}
+
+.mathjax-container {
+    display: inline-block; /* Render LaTeX dalam baris */
+    max-width: 100%;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 3px gray;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background:#6d66d9 ;
+    border-radius: 10px;
+}
