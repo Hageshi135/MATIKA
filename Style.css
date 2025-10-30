@@ -1,10 +1,9 @@
-
 .body-index {
     background-color: #dde4ff;
     background-image: url(Gambar/7.png);
     background-size: cover;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden; /* Mencegah scroll horizontal yang tidak perlu */
 }
 
 .body-isi {
@@ -20,21 +19,24 @@
 }
 
 .Navbar {
-
     width: 90%;
-    height: 50px;
-    margin-top: 10px;
+    height: auto; /* Dibuat auto agar bisa menyesuaikan */
+    margin: 10px auto; /* Menengahkan navbar */
     border-radius: 10px;
-
 }
 
 .ul-Navbar {
-
     display: flex;
-    justify-content: right;
+    justify-content: space-between; /* Mengatur jarak MATIKA dan links */
+    align-items: center; /* Menyamakan tinggi */
+    flex-wrap: wrap; /* Membungkus jika tidak muat */
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.nav-links {
+    display: flex;
 }
 
 .ul-Navbar a {
@@ -57,55 +59,68 @@ ul.ul-Navbar a:hover {
     font-size: 30px;
     font-family: 'Merriweather', serif;
     border-radius: 3px;
-
+    margin-left: 5px; /* Memberi jarak antar link */
 }
 
 .li-MATIKA {
-    justify-content: left;
     list-style-type: none;
-    margin-right: 42%;
     color: #6d66d9;
     font-size: 60px;
     font-family: sans-serif;
     font-weight: bold;
-
+    /* margin-right: 42% Dihapus, diganti justify-content */
 }
 
 .li-aljabar {
     justify-content: left;
     list-style-type: none;
-    margin-right: 30%;
+    margin-right: 30%; /* Masih di sini jika digunakan di halaman lain */
     color: #6d66d9;
     font-size: 60px;
     font-family: sans-serif;
 }
 
+/* KELAS BARU UNTUK HERO SECTION */
+.hero-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Ini kunci agar responsif */
+    padding: 20px 7%;
+}
+
+.hero-text {
+    flex-basis: 50%; /* Mengambil setengah lebar */
+    min-width: 300px; /* Lebar minimum sebelum membungkus */
+}
+
 .selamat {
-    justify-content: left;
-    margin-left: 7%;
+    /* margin-left: 7% Dihapus, diatur oleh hero-container */
     color: #264cc9;
     font-size: 40px;
     font-family: sans-serif;
-    padding: 10 px;
+    padding: 10px;
 }
 
 .kami {
-    justify-content: left;
-    margin-left: 7%;
+    /* margin-left: 7% Dihapus */
     color: #264cc9;
     font-size: 15px;
     font-family: sans-serif;
-    padding: 20 px;
-
+    padding: 20px;
 }
 
 .logo {
-    z-index: 2;
-    position: relative;
+    /* SEMUA PROPERTI INI DIHAPUS: */
+    /* z-index: 2; */
+    /* position: relative; */
+    /* left: 1100px; */
+    /* top: -175px; */
+    
+    /* DIGANTI DENGAN INI: */
     height: 300px;
     width: auto;
-    left: 1100px;
-    top: -175px;
+    max-width: 100%; /* Agar logo ikut mengecil */
 }
 
 
@@ -114,22 +129,21 @@ ul.ul-Navbar a:hover {
     justify-content: flex-start;
     gap: 50px;
     padding: 30px;
-    overflow-x: auto;
-    margin-top: -180px;
+    overflow-x: auto; /* Biarkan ini, horizontal scroll di HP itu wajar */
+    margin-top: 20px; /* Mengganti margin-top negatif */
     margin-left: 60px;
-    white-space: nowrap
-    
+    white-space: nowrap;
 }
+
 .content-container-isi {
-    display: flex;               
-    flex-wrap: wrap;               
-    gap: 50px;                     
-    overflow-x: auto;             
-    padding: 10px 0;              
-    margin-bottom: 20px; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    overflow-x: auto;
+    padding: 10px 0;
+    margin-bottom: 20px;
     margin-top: 100px;
     margin-left: 75px;
-    
 }
 
 .content-box {
@@ -141,10 +155,11 @@ ul.ul-Navbar a:hover {
     padding: 20px;
     text-decoration: none;
     flex: 0 0 auto;
-    max-height:300px ;
+    max-height: 300px;
     margin-right: 20px;
-    transition: transform 0.3s; 
+    transition: transform 0.3s;
 }
+
 .content-box:hover {
     transform: scale(1.1);
 }
@@ -158,9 +173,8 @@ ul.ul-Navbar a:hover {
     text-align: center;
     padding: 20px;
     text-decoration: none;
-    position: fixed;
+    position: fixed; /* Ini masih fixed, akan di-override di media query */
     top: 20%;
-
 }
 
 .content-box img {
@@ -181,14 +195,11 @@ ul.ul-Navbar a:hover {
 .content-box p {
     font-size: 0.9em;
     color: #555;
-
 }
 
 .content-box a {
     text-decoration: none;
 }
-
-
 
 .content-container-AL {
     display: flex;
@@ -198,7 +209,6 @@ ul.ul-Navbar a:hover {
     overflow-x: auto;
     margin-top: 200px;
     margin-left: 15%;
-    
 }
 
 
@@ -230,10 +240,10 @@ ul.ul-Navbar a:hover {
 
 
 .tips-box {
-    position: fixed;
+    position: fixed; /* Ini juga akan di-override */
     top: 20%;
     right: 150px;
-    width: 700px;
+    width: 700px; /* Terlalu lebar untuk HP */
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -254,19 +264,90 @@ ul.ul-Navbar a:hover {
 }
 
 .mathjax-container {
-    display: inline-block; /* Render LaTeX dalam baris */
+    display: inline-block;
     max-width: 100%;
     overflow: hidden;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 15px;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     box-shadow: inset 0 0 3px gray;
     border-radius: 10px;
 }
-::-webkit-scrollbar-thumb{
-    background:#6d66d9 ;
+
+::-webkit-scrollbar-thumb {
+    background: #6d66d9;
     border-radius: 10px;
+}
+
+
+/* ======================================================= */
+/* === INILAH KUNCI RESPONSIVE: MEDIA QUERY === */
+/* ======================================================= */
+
+/* Aturan ini berlaku jika lebar layar 768px atau kurang (Tablet/HP) */
+@media (max-width: 768px) {
+    
+    /* 1. Perbaikan Navbar */
+    .ul-Navbar {
+        flex-direction: column; /* Susun item ke bawah */
+        align-items: center; /* Tengahkan */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Susun link ke bawah */
+        width: 100%;
+        text-align: center;
+    }
+
+    .li-Navbar {
+        width: 90%; /* Buat tombol link memenuhi layar */
+        margin: 5px 0; /* Beri jarak vertikal */
+        font-size: 24px; /* Kecilkan font sedikit */
+    }
+
+    .li-MATIKA {
+        font-size: 50px; /* Kecilkan font logo */
+        text-align: center;
+    }
+
+    /* 2. Perbaikan Hero Section */
+    .hero-container {
+        flex-direction: column; /* Susun ke bawah */
+        text-align: center;
+    }
+
+    .logo {
+        order: -1; /* Pindahkan logo ke atas teks */
+        height: 200px; /* Kecilkan logo */
+        margin-bottom: 20px;
+    }
+
+    .selamat {
+        font-size: 30px; /* Kecilkan font */
+    }
+
+    /* 3. Perbaikan Container Konten */
+    .content-container {
+        margin-left: 0;
+        padding: 20px;
+        justify-content: flex-start;
+    }
+
+    .content-box {
+        width: 250px; /* Kecilkan kotak konten */
+    }
+
+    /* 4. Perbaikan Elemen "Fixed" (Penting!) */
+    .tips-box,
+    .content-box-tips {
+        position: relative; /* Hapus "fixed", buat jadi normal */
+        width: 90%; /* Lebar 90% dari layar */
+        margin: 20px auto; /* Tengahkan */
+        right: auto;
+        top: auto;
+    }
 }
